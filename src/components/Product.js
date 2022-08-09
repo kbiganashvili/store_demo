@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default function Product(props) {
-  const { element, changeSelected, changeSelectedAmount } = props;
+  const { element, changeSelected, changeSelectedAmount } = this.props;
   const { id, src, name, price, stock, amount } = element;
-  let localBasket = JSON.parse(localStorage.getItem('Basket')) || [];
+  let localBasket = JSON.parse(localStorage.getItem('Basket')) || {};
 
   return (
     <div className="main-container">
